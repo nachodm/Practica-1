@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+    	<title>Perfil - Facebluff</title>
+        <meta name="description" content="Facebluff">
+    	<meta charset ="utf-8"/>
+    	<link type="text/css" rel="stylesheet" href="/css/main.css">
+    </head>
+    <body>
+        <div id="header">
+            <div id="title">
+                <img src="/img/Logo.png" alt="FaceBluff logo" id="logo">
+            </div>
+            <div id="optionsmenu">
+                <a class="current" href="/profile">
+                Perfil
+                </a>
+                <a class="options" href="/friends">
+                Amigos
+                </a>
+                <a class="options"  href="/questions">
+                Preguntas
+                </a>
+                <a class="options"  href="/logout">
+                Desconectar
+                </a>
+                <a class="options"  href="#">
+                <%= user.points %> pts.
+                </a>
+            </div>
+        </div>
+        <div id="content">
+            <h2 class="mytext">Tu perfil</h2>
+            <form id="redirectModify" method="get" action="/redirectModify">     
+                <table id="displayProfile">
+                    <tr>
+                        <td rowspan="4">    
+                            <img class="icon" src="icons/Casper-01.png" alt="profile picture"/></td>
+                        <td class="mytext"><%= user.name %></td>
+                    </tr>
+                    <tr>
+                        <td class="mytext"><%= user.birthdate %></td>
+                    </tr>
+                    <tr>
+                        <% if (user.gender === "male") { %>
+                            <td class="mytext">Hombre</td>
+                        <% } else if (user.gender === "female") { %>
+                            <td class="mytext">Mujer</td>
+                        <% } else { %>
+                        <td class="mytext">Otro</td>
+                        <% } %>
+                    </tr>
+                    <tr>
+                        <td class="mytext"><%= user.points %></td>
+                    </tr>
+                </table>
+                <input class="profile_button" type="submit" value="Modificar Usuario">
+            </form>
+        </div>
+    </body>
+</html>

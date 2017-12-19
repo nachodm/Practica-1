@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+    	<title>Registro - Facebluff</title>
+        <meta name="description" content="Facebluff">
+    	<meta charset ="utf-8"/>
+    	<link type="text/css" rel="stylesheet" href="/css/main.css">
+    </head>
+    <body>
+        <div id="header">
+            <div id="title">
+                <img src="/img/Logo.png" alt="FaceBluff logo" id="logo">
+            </div>
+            <div id="optionsmenu">
+                <a class="options" href="/main">
+                Entrar
+                </a>
+                <a class="current" href="/signup">
+                Nuevo usuario
+                </a>
+            </div>
+        </div>
+        <div id="content">
+            <h2 class="mytext">Nuevo Usuario</h2>
+             <form id="signup" method="POST" action="/newUser">
+                 <div class="formelement">
+                    <div>Email</div>
+                    <div><input type="text" name="newemailaddress"></div>
+                 </div>
+                 <div class="formelement">
+                    <div>Contraseña</div>
+                    <div><input type="password" name="newpassword"></div>
+                 </div>
+                 <div class="formelement">
+                    <div>Nombre completo</div>
+                    <div><input type="text" name="newname"></div>
+                 </div>
+                 <div class="formelement">
+                    <div>Sexo</div>
+                    <div>
+                        <input type="radio" name="gender" value="male" checked> Masc.
+                        <input type="radio" name="gender" value="female"> Fem.
+                        <input type="radio" name="gender" value="other"> Otro
+                    </div>
+                 </div>
+                 <div class="formelement">
+                    <div>Fecha de nacimiento</div>
+                    <div>
+                        <input type="date" name="birthdate" placeholder="dd/mm/aaaa"></div>
+                 </div>
+                 <div class="formelement">
+                    <div>Imagen de perfil</div>
+                    <div>
+                        <input type="file" name="profilepic">
+                    </div>
+                 </div>
+                 <input class="button" type="submit" value="Crear Usuario">
+            </form> 
+        </div>
+    </body>
+</html>

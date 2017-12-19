@@ -1,0 +1,148 @@
+body {
+    background-image: url('/img/Fondo.jpg');
+}
+
+#title {
+    display: flex;
+    justify-content: center;
+}
+#logo {
+    height: 100px; 
+}
+
+#optionsmenu{
+    display: flex;
+    justify-content: space-around;
+    margin-left: 80px;
+}
+
+@font-face {
+    font-family: GloriaHallelujah;
+    src: url(/fonts/GloriaHallelujah.ttf);
+}
+
+.options {
+    color: white;
+    font-family: "GloriaHallelujah";
+    text-decoration: none;
+    font-size: 25px;
+    margin-top: 20px;
+    margin-right: 40px;
+    font-weight: bold;
+}
+
+.current {
+    color: rgba(255, 255, 255, 0.493);
+    font-family: "GloriaHallelujah";
+    text-decoration: none;
+    font-size: 25px;
+    margin-top: 20px;
+    margin-right: 40px;
+    font-weight: bold;
+}
+
+.options:hover {
+    transition-duration: 0.4s;
+    color: black;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mytext {
+    color: black;
+    font-family: "GloriaHallelujah";
+    font-size: 25px;
+}
+
+#login {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    background-color: #9d00b0;
+    border-radius: 15px;
+    width: 400px;
+    padding: 10px;
+}
+
+#signup {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    background-color: #9d00b0;
+    border-radius: 15px;
+    width: 500px;
+    padding: 10px;
+}
+
+.formelement {
+    display: flex;
+    justify-content:space-between;
+    padding: 5%;
+    padding-top: 3px;
+}
+
+.whitetext {
+    font-family: sans-serif;
+    color: white;
+}
+
+.button {
+    color: white;
+    font-family: "GloriaHallelujah";
+    text-decoration: none;
+    background-color:#c850e0;
+    margin-top: 10px;
+    border-radius: 6px;
+    padding: 2px;
+    font-size: 20px;
+    width: 40%;
+    align-self: center;
+}
+
+.button:hover {
+    transition-duration: 0.4s;
+    background-color: white;
+    color: #c850e0;
+}
+
+.profile_button {
+    color: white;
+    font-family: "GloriaHallelujah";
+    text-decoration: none;
+    background-color:#c850e0;
+    border-radius: 6px;
+    padding: 2px;
+    margin-left: 10px;
+    font-size: 20px;
+    text-align: center;
+    display: inline-block;
+    white-space: normal;
+    width: 100px;
+}
+.friendsView {
+    text-decoration: none;
+    font-family: "GloriaHallelujah";
+    font-size: 20pt;
+    color: black;
+}
+.profile_button:hover {
+    transition-duration: 0.4s;
+    background-color: white;
+    color: #c850e0;
+}
+
+#displayProfile {
+    border-spacing: 15px;
+}
+
+.icon {
+    width: 175px;
+}
+
+.icon_miniature {
+    width: 35px;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+    	<title>Perfil - Facebluff</title>
+        <meta name="description" content="Facebluff">
+    	<meta charset ="utf-8"/>
+    	<link type="text/css" rel="stylesheet" href="/css/main.css">
+    </head>
+    <body>
+        <div id="header">
+            <div id="title">
+                <img src="/img/Logo.png" alt="FaceBluff logo" id="logo">
+             </div>   
+        </div>
+        
+            <form ></form>
+            <div id="content">
+                <h2 class="mytext">Nueva pregunta</h2>
+                <form id="createQuestion" method="post" action="/createQuestion">
+                    <div class="mytext">
+                       <div>Crear pregunta</div>
+                       <div><input type="text" name="newQuestion"></div>
+                    </div>
+                    <div class="mytext">
+                       <div>Opciones</div>
+                           <table>
+                               <tr>
+                                    <input type="text" name="op1" value="" > Opción 1
+                               </tr>
+                               <tr>
+                                    <input type="text" name="op2" value=""> Opción 2
+                               </tr>
+                               <tr>
+                                    <input type="text" name="op3" value=""> Opción 3
+                               </tr>
+                               <tr>
+                                    <input type="text" name="other" value=""> Otro
+                               </tr>
+                           </table> 
+                        </div>
+                    </div>
+                    <input class="button" type="submit" value="Crear"></div>
+            </div>  
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+    	<title>Bienvenido - Facebluff</title>
+        <meta name="description" content="Facebluff">
+    	<meta charset ="utf-8"/>
+    	<link type="text/css" rel="stylesheet" href="/css/main.css">
+    </head>
+    <body>
+        <div id="header">
+            <div id="title">
+                <img src="/img/Logo.png" alt="FaceBluff logo" id="logo">
+            </div>
+            <div id="optionsmenu">
+                <a class="current" href="/main">
+                Entrar
+                </a>
+                <a class="options" href="/signup">
+                Nuevo usuario
+                </a>
+            </div>
+        </div>
+        <div id="content">
+            <h2 class="mytext">Entrar</h2>
+             <form id="login" method="POST" action="/isUserCorrect">
+                 <div class="formelement">
+                    <div>Email</div>
+                    <div><input type="text" name="emailaddress"></div>
+                 </div>
+                 
+                 <div class="formelement">
+                    <div>Contraseña</div>
+                    <div><input type="password" name="password"></div>
+                 </div>
+                 <input class="button" type="submit" value="Entrar">
+            </form> 
+        </div>
+    </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+    	<title>Perfil - Facebluff</title>
+        <meta name="description" content="Facebluff">
+    	<meta charset ="utf-8"/>
+    	<link type="text/css" rel="stylesheet" href="/css/main.css">
+    </head>
+    <body>
+        <div id="header">
+            <div id="title">
+                <img src="/img/Logo.png" alt="FaceBluff logo" id="logo">
+            </div>
+            <div id="optionsmenu">
+                <a class="options" href="/profile">
+                Perfil
+                </a>
+                <a class="options" href="/friends">
+                Amigos
+                </a>
+                <a class="current"  href="/questions">
+                Preguntas
+                </a>
+                <a class="options"  href="/logout">
+                Desconectar
+                </a>
+                <a class="options"  href="#">
+                <%= user.points %> pts.                        
+                </a>
+            </div>
+        </div>
+        <div id="content">
+            <h2 class="mytext">Preguntas seleccionadas aleatoriamente</h2>
+			<form action=""></form>
+            <table id="questions">   
+                <% if (questions.length === "0") { %>
+                    <td class="mytext">La búsqueda no dio resultados.</td>
+                <% } else { %>
+                    <% questions.forEach(question => { %>
+                        <form id="friendRequest" method="POST" action="/sendFriendRequest">
+                            <td>
+                                 <a><%= question.question_text %> </a>
+                            </td>
+                        </form>
+                    <% }); %>
+                <% } %>
+            </table>
+            <div class = "mytext">
+            <p> !Añade tus preguntas!</p>
+            </div>
+            <form id = "questions" method="get" action="/newQuestions">
+                 <input class="profile_button" type="submit" value="Crear nueva pregunta">
+            </form>
+        </div>
+    </body>
+</html>

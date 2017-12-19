@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+    	<title>Amigos - Facebluff</title>
+        <meta name="description" content="Facebluff">
+    	<meta charset ="utf-8"/>
+    	<link type="text/css" rel="stylesheet" href="/css/main.css">
+    </head>
+    <body>
+        <div id="header">
+            <div id="title">
+                <img src="/img/Logo.png" alt="FaceBluff logo" id="logo">
+            </div>
+            <div id="optionsmenu">
+                <a class="options" href="/profile">
+                Perfil
+                </a>
+                <a class="current" href="/friends">
+                Amigos
+                </a>
+                <a class="options"  href="/questions">
+                Preguntas
+                </a>
+                <a class="options"  href="/logout">
+                Desconectar
+                </a>
+                <a class="options"  href="#">
+                <%= user.points %> pts.                        
+                </a>
+            </div>
+        </div>
+        <div id="content">
+            <h2 class="mytext">Solicitudes de amistad</h2>
+            <table>
+                <tr>
+                    <% if (requests.length === "0") { %>
+                            <td class="mytext">No tienes solicitudes de amistad pendientes</td>
+                    <% } else { %>
+                        <% requests.forEach(request => { %>
+                            <td>
+                                <img class="icon_miniature" src="icons/Witch-01.png" alt="profile picture"/> <a class="friendsView" href="#"> <%= friend.name %> </a> 
+                            </td>
+                            <td>
+                                <input class="profile_button" type="submit" value="Aceptar">
+                            </td>
+                            <td>
+                                <input class="profile_button" type="submit" value="Rechazar">
+                            </td>
+                        <% }); %>
+                    <% } %>
+                </tr>
+            </table>
+            <h2 class="mytext">Búsqueda de amigos</h2>
+
+            <form action="/friends_Search" method="POST">
+                <table>
+                    <tr>
+                        <td>
+                            Buscar por nombre:
+                        </td>
+                        <td>
+                            <input type="text" name="searchfriend">                     
+                       </td>
+                        <td>
+                            <input class="profile_button" type="submit" value="Buscar">
+                        </td>
+                    </tr>
+               </table>
+            </form>
+            <h2 class="mytext">Mis amigos</h2>
+            <table>
+                    <tr>
+                        <% if (friends.length === "0") { %>
+                                <td class="mytext">No tienes amigos, estás solísimo.</td>
+                        <% } else { %>
+                            <% friends.forEach(friend => { %>
+                                <td class="friendsView">
+                                    <img class="icon_miniature" src="icons/Witch-01.png" alt="profile picture"/> <a href="#"> <%= friend.name %> </a> 
+                                </td>
+                            <% }); %>
+                        <% } %>
+                    </tr>
+                </table>
+        </div>
+    </body>
+</html>
